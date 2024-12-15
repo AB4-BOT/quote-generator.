@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Générateur de Citations</title>
+    <!-- CSS intégré -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        .container {
+            margin-top: 20%;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Générateur de Citations</h1>
+        <p id="quote">Cliquez sur le bouton pour une citation !</p>
+        <button onclick="generateQuote()">Nouvelle citation</button>
+    </div>
+
+    <!-- JavaScript intégré -->
+    <script>
+        const quotes = [
+            "Le succès, c'est tomber sept fois et se relever huit. - Proverbe japonais",
+            "La vie, c'est comme une bicyclette, il faut avancer pour ne pas perdre l'équilibre. - Albert Einstein",
+            "Hâte-toi de bien faire. - Marc Aurèle",
+            "Le seul moyen de faire du bon travail est d'aimer ce que vous faites. - Steve Jobs",
+            "Dans la vie, rien n'est à craindre, tout est à comprendre. - Marie Curie"
+        ];
+
+        function generateQuote() {
+            const randomIndex = Math.floor(Math.random() * quotes.length);
+            document.getElementById("quote").textContent = quotes[randomIndex];
+        }
+    </script>
+</body>
+</html>
